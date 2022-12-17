@@ -19,11 +19,17 @@ android {
             useSupportLibrary true
         }
     }
+    signingConfigs{
+        release{
+
+        }
+    }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {
